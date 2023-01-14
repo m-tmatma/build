@@ -1,0 +1,20 @@
+﻿root = true
+
+[*]
+indent_style = tab
+indent_size = 4
+end_of_line = crlf
+trim_trailing_whitespace = true
+insert_final_newline = true
+end_of_line = crlf
+charset = utf-8-bom
+
+[*.bat]
+charset = shift_jis
+end_of_line = crlf
+
+[*.yml]
+indent_style = space
+
+[*.md]
+indent_style = space
