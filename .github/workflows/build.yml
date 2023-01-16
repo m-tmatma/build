@@ -10,6 +10,7 @@ on:
 env:
   NOPAUSE: 1
   REMOVE_TMP: 1
+  RETENTION_DAYS: 3
 
 jobs:
   build-teraterm:
@@ -43,8 +44,10 @@ jobs:
         with:
           name: artifacts_installer
           path: ./ttssh2/installer/Output/*.exe
+          RETENTION_DAYS: ${{env.RETENTION_DAYS}}
       - name: artifacts_zip
         uses: actions/upload-artifact@v2
         with:
           name: artifacts_zip
           path: ./ttssh2/installer/Output/*.zip
+          RETENTION_DAYS: ${{env.RETENTION_DAYS}}
