@@ -45,9 +45,17 @@ jobs:
           name: artifacts_installer
           path: ./ttssh2/installer/Output/*.exe
           retention-days: ${{env.RETENTION_DAYS}}
+
       - name: artifacts_zip
         uses: actions/upload-artifact@v2
         with:
           name: artifacts_zip
-          path: ./ttssh2/installer/Output/*.zip
+          path: ./ttssh2/installer/Output/*-snapshot.zip
+          retention-days: ${{env.RETENTION_DAYS}}
+
+      - name: artifacts_pdb_zip
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts_pdb_zip
+          path: ./ttssh2/installer/Output/*-snapshot_pdb.zip
           retention-days: ${{env.RETENTION_DAYS}}
