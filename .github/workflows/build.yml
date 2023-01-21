@@ -28,6 +28,14 @@ jobs:
       - name: checkout
         shell: cmd
         run: svn checkout http://svn.osdn.net/svnroot/ttssh2/trunk "ttssh2" --quiet
+
+      - name: Get rev
+        shell: powershell
+        working-directory: ttssh2
+        run: |
+          $ret = &"svn info  --no-newline --show-item revision"
+          Write-Output $ret
+
       - name: install
         shell: cmd
         run: |
