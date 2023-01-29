@@ -27,7 +27,7 @@ jobs:
             ttssh2/buildtools
       - name: checkout
         shell: cmd
-        run: svn checkout -r 10541 http://svn.osdn.net/svnroot/ttssh2/trunk "ttssh2" --quiet
+        run: svn checkout -r 10539 http://svn.osdn.net/svnroot/ttssh2/trunk "ttssh2" --quiet
 
       - name: show svn rev
         shell: cmd
