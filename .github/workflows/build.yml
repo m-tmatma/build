@@ -28,6 +28,12 @@ jobs:
       - name: checkout
         shell: cmd
         run: svn checkout http://svn.osdn.net/svnroot/ttssh2/trunk "ttssh2" --quiet
+
+      - name: show svn rev
+        shell: cmd
+        working-directory: ttssh2
+        run: svn info --show-item revision
+
       - name: install
         shell: cmd
         run: |
