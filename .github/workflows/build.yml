@@ -1,6 +1,7 @@
 ﻿name: bulid
 on:
   push:
+  pull_request:
   workflow_dispatch:
   schedule:
     # See https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
