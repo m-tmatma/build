@@ -7,6 +7,7 @@ on:
     # This example triggers the workflow every day at 19:00 UTC(JST+0900 04:00, Note: 19+9-24=4):
     - cron:  '0 19 * * *'
 
+
 env:
   NOPAUSE: 1
   REMOVE_TMP: 1
