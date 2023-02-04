@@ -25,7 +25,7 @@ jobs:
         with:
           key: ttssh2-cache-${{env.BUILD_CACHE_VERSION}}
           path: |
-            ttssh2/libs
+            ttssh2/libs/download
             ttssh2/buildtools/cygwin64
             ttssh2/buildtools/download
             ttssh2/buildtools/innosetup6
