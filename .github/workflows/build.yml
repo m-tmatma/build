@@ -12,6 +12,7 @@ env:
   NOPAUSE: 1
   REMOVE_TMP: 1
   RETENTION_DAYS: 3
+  BUILD_CACHE_VERSION: v2
 
 jobs:
   build-teraterm:
@@ -22,10 +23,14 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          key: ttssh2-cache
+          key: ttssh2-cache-${{env.BUILD_CACHE_VERSION}}
           path: |
             ttssh2/libs
-            ttssh2/buildtools
+            ttssh2/buildtools/cygwin64
+            ttssh2/buildtools/download
+            ttssh2/buildtools/innosetup6
+            ttssh2/buildtools/innounp
+            ttssh2/buildtools/unrar
       - name: checkout
         shell: cmd
         run: svn checkout http://svn.osdn.net/svnroot/ttssh2/trunk "ttssh2" --quiet
